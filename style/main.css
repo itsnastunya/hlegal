@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 100%;
+  letter-spacing: 0;
+  letter-spacing: 0;
+}
+
+h2 {
+  color: #323264;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #323264;
+  letter-spacing: 0;
+}
+
+h3 {
+  color: #323264;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #323264;
+  letter-spacing: 0;
+}
+
+.h3caps {
+  color: #323264;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 1;
+  color: #323264;
+  letter-spacing: 1;
+  text-transform: uppercase;
+}
+
+h4 {
+  color: #323264;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #323264;
+  letter-spacing: 0;
+}
+
+p {
+  color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0;
+  color: #000000;
+  letter-spacing: 0;
+  margin-bottom: 20px;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul li,
+ol li {
+  color: #000000;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0;
+  color: #000000;
+  letter-spacing: 0;
+  margin-bottom: 15px;
+}
+ul li:last-child,
+ol li:last-child {
+  margin-bottom: 0;
+}
+ul li::marker,
+ol li::marker {
+  color: #F0145A;
+}
+
+.link {
+  color: #24A3FF;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #24A3FF;
+  letter-spacing: 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-bottom: 12px;
+}
+.link:hover {
+  color: #F0145A;
+}
+
+.input {
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  padding: 15px;
+  color: #000;
+  background: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+.input::-moz-placeholder {
+  color: rgb(179, 179, 186);
+}
+.input::placeholder {
+  color: rgb(179, 179, 186);
+}
+.input:hover {
+  box-shadow: 0 0 6px #24A3FF;
+}
+.input:focus {
+  border-color: #24A3FF;
+  box-shadow: 0 0 6px #24A3FF;
+}
+
+.btn {
+  padding: 18px 30px;
+  color: white;
+  min-width: 180px;
+  line-height: 20px;
+  font-weight: bold;
+  background: #24A3FF;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.5);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #0085FF;
+}
+.btn:active {
+  background: #006CCF;
+}
+
+.gradient {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+}
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding: 50px 60px 0;
+}
+.header__logo {
+  display: inline-block;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.top-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.small-btn {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  padding: 5px 7px;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.small-btn.active, .small-btn:hover {
+  background: #F0145A;
+}
+
+.top-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  list-style: none;
+}
+.top-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  height: 100%;
+}
+.top-list__address, .top-list__phone {
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+.top-list__address:hover, .top-list__phone:hover {
+  color: #F0145A;
+}
+.top-list__phone {
+  font-weight: 700;
+}
+.top-list__social {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+.top-list__social-icon {
+  fill: #FFFFFF;
+  transition: fill 0.2s ease;
+}
+.top-list__social-icon:hover {
+  fill: #F0145A;
+}
+
+.top-list__social {
+  display: flex;
+  align-items: center;
+}
+
+.top-block > *:not(:last-child),
+.top-list > li:not(:last-child) {
+  position: relative;
+}
+.top-block > *:not(:last-child)::after,
+.top-list > li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -9px;
+  transform: translate(50%, -50%);
+  width: 6px;
+  height: 6px;
+  background-color: #E6E6F0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 3px;
+}
+.nav__link {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  transition: color 0.5s ease;
+  position: relative;
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+.nav__link:hover::after {
+  transform: scaleX(1);
+}
+.nav__link--active {
+  color: #F0145A;
+}
+.nav__link--active::after {
+  transform: scaleX(1);
+  background-color: #F0145A;
+}/*# sourceMappingURL=main.css.map */

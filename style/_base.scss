@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+// mixins
+@mixin font($color, $fontWeight, $fontSize, $lineHeight, $letterSpacing) {
+        color: $color;
+        font-weight: $fontWeight;
+        font-size: $fontSize;
+        line-height: $lineHeight;
+        letter-spacing: $letterSpacing;
+
+        @if $color !=null {
+                color: $color;
+        }
+
+        @if $letterSpacing !=null {
+                letter-spacing: $letterSpacing;
+        }
+}
+
+@mixin flex-container(
+  $direction: row,
+  $justifyContent: flex-start,
+  $alignItems: center,
+  $flexWrap: wrap,
+  $gap: 10px
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-wrap: $flexWrap;
+  gap: $gap;
+}
+
+body {
+        font-family: "Montserrat", sans-serif;
+        background: #000;
+}
+
+// Colors
+//    Main
+$color-main-regular: #323264;
+$color-main-alt: #46466E;
+$color-main-soft: #686887;
+
+// Accent
+$color-accent: #F0145A;
+
+// Active
+$color-active-regular: #24A3FF;
+$color-active-hover: #0085FF;
+$color-active-active: #006CCF;
+
+// Grey
+$color-grey-bg: #F5F5FA;
+$color-grey-bg-alt: #EDEDF7;
+$color-grey-text: #B3B3BA;
+$color-grey-separator: #E6E6F0;
+
+// Gradients
+$gradient-regular: linear-gradient(128.63deg,
+                #323264 0%,
+                #323264 73.96%,
+                #A54B5F 100%);
+
+$gradient-soft: linear-gradient(42.01deg,
+                #323264 14.33%,
+                #323264 51.39%,
+                #7A425E 87.53%);
+
+$gradient-red: linear-gradient(323.35deg,
+                #F0145A 6.7%,
+                #693264 70.36%);
+
+$gradient-supersoft: linear-gradient(228.57deg,
+                #323264 11.93%,
+                #323264 57.17%,
+                #643E72 87.46%);
+
+$gradient-red-text: linear-gradient(90.13deg,
+                #F0145A 0.84%,
+                #EF8080 99.96%);
+
+//reset 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+}
+
+// Typography
+.gradient-text {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        background-image: $gradient-red-text;
+}
+
+h1 {
+        @include font(null, 700, 38px, 100%, 0);
+}
+
+h2 {
+        @include font($color-main-regular, 700, 30px, 100%, 0);
+}
+
+h3 {
+        @include font($color-main-regular, 700, 22px, 100%, 0);
+}
+
+.h3caps {
+        @include font($color-main-regular, 700, 14px, 100%, 1);
+        text-transform: uppercase;
+}
+
+h4 {
+        @include font($color-main-regular, 700, 16px, 100%, 0);
+}
+
+p {
+        @include font(#000000, 400, 16px, 26px, 0);
+        margin-bottom: 20px;
+
+        &:last-child {
+                margin-bottom: 0;
+        }
+}
+
+ul,
+ol {
+        li {
+                @include font(#000000, 400, 18px, 26px, 0);
+                margin-bottom: 15px;
+
+                &:last-child {
+                        margin-bottom: 0;
+                }
+        }
+
+        li::marker {
+                color: $color-accent;
+        }
+}
+
+.link {
+        @include font($color-active-regular, 400, 16px, 20px, 0);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        margin-bottom: 12px;
+
+        &:hover {
+                color: $color-accent;
+        }
+}
+
+.input {
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 1);
+  padding: 15px;
+  color: #000;
+  background: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: all 0.2s ease;
+
+  &::placeholder {
+    color: rgba(179, 179, 186, 1);
+  }
+
+  &:hover {
+    box-shadow: 0 0 6px $color-active-regular;
+  }
+
+  &:focus {
+    border-color: $color-active-regular;
+    box-shadow: 0 0 6px $color-active-regular;
+  }
+}
+
+.btn {
+  padding: 18px 30px;
+  color: white;
+  min-width: 180px;
+  line-height: 20px;
+  font-weight: bold;
+  background: $color-active-regular;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.5);
+
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-active-hover;
+  }
+
+  &:active {
+    background: $color-active-active;
+  }
+}
