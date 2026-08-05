@@ -4,6 +4,20 @@
       position: relative;
       overflow: hidden;
       background: $gradient-supersoft;
+
+      // Фонова буква h
+      &__bg-symbol {
+         position: absolute;
+         top: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 100%;
+         max-width: 697px;
+         height: 100%;
+         max-height: 799px;
+         pointer-events: none;
+         z-index: 0;
+      }
    }
 
 
@@ -13,7 +27,7 @@
 
       &__container {
          @include flex-container($justifyContent: space-between, $alignItems: center, $flexWrap: nowrap);
-         padding: 50px 60px 0;
+         padding-top: 50px;
       }
 
       &__logo {
@@ -179,5 +193,50 @@
 
       &__icon {
          color: #FFFFFF;
+      }
+   }
+
+   .hero {
+      position: relative;
+
+      &__banner {
+         position: relative;
+         min-height: 684px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+
+      // Текст заголовка
+      &__title {
+         position: relative;
+         z-index: 1;
+         color: #FFFFFF;
+         text-align: center;
+         max-width: 800px;
+      }
+
+      // Кнопка скролу
+      &__scroll-btn {
+         position: absolute;
+         bottom: 30px;
+         left: 50%;
+         transform: translateX(-50%);
+         z-index: 1;
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+      &__scroll-icon {
+         width: 42px;
+         height: 42px;
+         color: #ffffff; 
+         transition: color 0.3s ease;
+
+         &:hover {
+            color: $color-accent; 
+         }
       }
    }
