@@ -6,6 +6,7 @@
       background: $gradient-supersoft;
    }
 
+
    .header {
       position: relative;
       z-index: 1;
@@ -16,8 +17,21 @@
       }
 
       &__logo {
-         display: inline-block;
+         display: inline-flex;
+         align-items: center;
+
+         &-slash {
+            color: $color-accent;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 6px;
+         }
+
+         &-text {
+            @include font(#FFFFFF, 400, 20px, 1, 0);
+         }
       }
+
    }
 
    .header-content {
@@ -155,5 +169,15 @@
                background-color: $color-accent;
             }
          }
+      }
+   }
+
+   .burger-menu {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &__icon {
+         color: #FFFFFF;
       }
    }

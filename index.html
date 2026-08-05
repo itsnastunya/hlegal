@@ -56,7 +56,46 @@
         </header>
 
         <header class="header mobile">
+            <div class="header__top">
+                <div class="lang-switcher">
+                    <button class="small-btn">УК</button>
+                    <button class="small-btn">РУ</button>
+                    <button class="small-btn active">EN</button>
+                </div>
+                <a class="top-list__phone" href="tel:0800211927">0800 211 927</a>
+            </div>
+            <div class="container header__container">
+                <a href="/" class="header__logo">
+                    <svg width="69" height="32">
+                        <use xlink:href="./sprite.svg#logo"></use>
+                    </svg>
+                    <span class="header__logo-slash">/</span>
+                    <span class="header__logo-text">services</span>
+                </a>
 
+
+                <label class="burger-menu" for="burger">
+                    <svg width="32" height="32" class="burger-menu__icon">
+                        <use xlink:href="./sprite.svg#burger-default"></use>
+                    </svg>
+                </label>
+                <input type="checkbox" hidden name="" id="burger">
+                <div class="mobile-overlay"></div>
+                <div class="header-mobile-dropdown">
+                    <label class="burger-menu" for="burger">
+                        <svg width="32" height="32">
+                            <use xlink:href="./sprite.svg#burger-close"></use>
+                        </svg>
+                    </label>
+                    <ul>
+                        <li><a href="" class="link">about us</a></li>
+                        <li><a href="" class="link">послуги</a></li>
+                        <li><a href="" class="link">команда</a></li>
+                        <li><a href="" class="link link--active">публікації</a></li>
+                        <li><a href="" class="link">контакти</a></li>
+                    </ul>
+                </div>
+            </div>
         </header>
     </div>
 </body>
