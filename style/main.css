@@ -26,7 +26,7 @@ body {
 .h1 {
   font-weight: 700;
   font-size: 38px;
-  line-height: 28px;
+  line-height: 100%;
   letter-spacing: 0;
   letter-spacing: 0;
 }
@@ -666,5 +666,66 @@ ol li::marker {
   .hero__banner {
     min-height: 804px;
     padding-top: 269px;
+  }
+  .tabs__container {
+    max-width: 904px;
+    padding: 60px;
+  }
+  #tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #tabs ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    width: auto;
+    flex-shrink: 0;
+    gap: 30px;
+    padding-right: 0;
+    padding-bottom: 15px;
+    border-right: none;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  #tabs ul::-webkit-scrollbar {
+    display: none;
+  }
+  #tabs li {
+    justify-content: flex-start;
+    flex-shrink: 0;
+  }
+  #tabs li a {
+    white-space: nowrap;
+    padding: 0 0 8px 0;
+  }
+  .ui-tabs-panel {
+    max-width: 648px;
+    margin-left: 0;
+    padding: 30px 0 0;
+  }
+  .ui-tabs-panel h2 {
+    white-space: normal;
+  }
+}
+@media screen and (max-width: 375px) {
+  .gradient__bg-symbol {
+    width: 100%;
+    max-width: 523px;
+    height: 100%;
+    max-height: 600px;
+  }
+  .hero__banner {
+    min-height: 498px;
+    padding-top: 129px;
+  }
+  .hero__title {
+    max-width: 315px;
+  }
+  .ui-tabs-panel {
+    max-width: 315px;
   }
 }/*# sourceMappingURL=main.css.map */
