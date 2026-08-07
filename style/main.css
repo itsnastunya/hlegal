@@ -633,4 +633,38 @@ ol li::marker {
     max-width: 861px;
     padding: 73px 0;
   }
+}
+@media screen and (max-width: 1024px) {
+  .gradient__bg-symbol {
+    width: 100%;
+    max-width: 670px;
+    height: 100%;
+    max-height: 768px;
+  }
+  .hero__banner {
+    min-height: 652px;
+    padding-top: 260px;
+  }
+  .tabs__container {
+    max-width: 904px;
+  }
+  .ui-tabs-panel {
+    max-width: 405px;
+    padding: 9.5px 0;
+  }
+  .ui-tabs-panel h2 {
+    white-space: normal;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gradient__bg-symbol {
+    width: 100%;
+    max-width: 893.28px;
+    height: 100%;
+    max-height: 1024px;
+  }
+  .hero__banner {
+    min-height: 804px;
+    padding-top: 269px;
+  }
 }/*# sourceMappingURL=main.css.map */

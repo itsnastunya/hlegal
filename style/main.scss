@@ -339,3 +339,53 @@
       }
 
    }
+
+   @media screen and (max-width: 1024px) {
+      .gradient {
+         &__bg-symbol {
+            width: 100%;
+            max-width: 670px;
+            height: 100%;
+            max-height: 768px;
+         }
+      }
+
+      .hero {
+         &__banner {
+            min-height: 652px;
+            padding-top: 260px;
+         }
+      }
+
+      .tabs__container {
+         max-width: 904px;
+      }
+
+      .ui-tabs-panel {
+         max-width: 405px;
+         padding: 9.5px 0;
+
+         h2 {
+            white-space: normal;
+         }
+      }
+   }
+
+   @media screen and (max-width: 768px) {
+      .gradient {
+         &__bg-symbol {
+            width: 100%;
+            max-width: 893.28px;
+            height: 100%;
+            max-height: 1024px;
+         }
+      }
+
+      .hero {
+         &__banner {
+            min-height: 804px;
+            padding-top: 269px;
+         }
+      }
+
+   }
