@@ -101,7 +101,7 @@ $gradient-red-text: linear-gradient(90.13deg,
 }
 
 .h1 {
-        @include font(null, 700, 38px, 28px, 0);
+        @include font(null, 700, 38px, 100%, 0);
 }
 
 h2 {
