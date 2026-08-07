@@ -100,25 +100,25 @@ $gradient-red-text: linear-gradient(90.13deg,
         background-image: $gradient-red-text;
 }
 
-h1 {
-        @include font(null, 700, 38px, 100%, 0);
+.h1 {
+        @include font(null, 700, 38px, 28px, 0);
 }
 
 h2 {
-        @include font($color-main-regular, 700, 30px, 100%, 0);
+        @include font($color-main-regular, 700, 30px, 37px, 0);
 }
 
 h3 {
-        @include font($color-main-regular, 700, 22px, 100%, 0);
+        @include font($color-main-regular, 700, 22px, 27px, 0);
 }
 
 .h3caps {
-        @include font($color-main-regular, 700, 14px, 100%, 1);
+        @include font($color-main-regular, 700, 14px, 17px, 1);
         text-transform: uppercase;
 }
 
 h4 {
-        @include font($color-main-regular, 700, 16px, 100%, 0);
+        @include font($color-main-regular, 700, 16px, 20px, 0);
 }
 
 p {
@@ -218,7 +218,7 @@ ol {
         }
 
         .header__container {
-                padding: 15px 15px 0; // відступ для блоку з логотипом
+                padding: 15px 15px 0; 
         }
 }
 
