@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-
+    <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/main.css">
 </head>
 
 <body>
-
     <div class="gradient">
-
-
+        <svg class="gradient__bg-symbol" aria-hidden="true">
+            <use xlink:href="./sprite.svg#hero-letter-h"></use>
+        </svg>
         <header class="header desctop">
             <div class="container header__container">
 
@@ -97,7 +97,71 @@
                 </div>
             </div>
         </header>
+
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__banner">
+                    <h1 class="hero__title h1">you legal solutions provider</h1>
+                    <a href="#services" class="hero__scroll-btn" aria-label="Scroll down">
+                        <svg width="36" height="36" class="hero__scroll-icon">
+                            <use xlink:href="./sprite.svg#button-scroll"></use>
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+        <section class="tabs">
+            <div class=" tabs__container">
+                <div id="tabs">
+                    <ul>
+                        <li><a href="#tabs-1">Consistent</a></li>
+                        <li><a href="#tabs-2">Customer oriented</a></li>
+                        <li><a href="#tabs-3">Innovative</a></li>
+                        <li><a href="#tabs-4">Business oriented</a></li>
+                    </ul>
+                    <div id="tabs-1">
+                        <h2>We turn the idea of legal services 1</h2>
+                        <p>Consolidating many years of experience and practice, the company's lawyers accompany complex
+                            projects and achieve a number of important decisions for the industry. Many of them form the
+                            practice of applying the law of the sea in Ukraine.</p>
+                    </div>
+                    <div id="tabs-2">
+                        <h2>We turn the idea of legal services 2</h2>
+                        <p>Consolidating many years of experience and practice, the company's lawyers accompany complex
+                            projects and achieve a number of important decisions for the industry. Many of them form the
+                            practice of applying the law of the sea in Ukraine.</p>
+                    </div>
+                    <div id="tabs-3">
+                        <h2>We turn the idea of legal services 3</h2>
+                        <p>Consolidating many years of experience and practice, the company's lawyers accompany complex
+                            projects and achieve a number of important decisions for the industry. Many of them form the
+                            practice of applying the law of the sea in Ukraine.</p>
+                    </div>
+                    <div id="tabs-4">
+                        <h2>We turn the idea of legal services 4</h2>
+                        <p>Consolidating many years of experience and practice, the company's lawyers accompany complex
+                            projects and achieve a number of important decisions for the industry. Many of them form the
+                            practice of applying the law of the sea in Ukraine.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js"
+        integrity="sha256-Fb0zP4jE3JHqu+IBB9YktLcSjI1Zc6J2b6gTjB0LpoM=" crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $("#tabs").tabs()
+        });
+    </script>
 </body>
 
 </html>

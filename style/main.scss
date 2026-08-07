@@ -4,6 +4,19 @@
       position: relative;
       overflow: hidden;
       background: $gradient-supersoft;
+
+      &__bg-symbol {
+         position: absolute;
+         top: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 100%;
+         max-width: 697px;
+         height: 100%;
+         max-height: 799px;
+         pointer-events: none;
+         z-index: 0;
+      }
    }
 
 
@@ -13,7 +26,7 @@
 
       &__container {
          @include flex-container($justifyContent: space-between, $alignItems: center, $flexWrap: nowrap);
-         padding: 50px 60px 0;
+         padding-top: 50px;
       }
 
       &__logo {
@@ -38,11 +51,11 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 16px;
+      gap: 18px;
    }
 
    .top-block {
-      @include flex-container($justifyContent: flex-end, $alignItems: center, $gap: 18px);
+      @include flex-container($justifyContent: flex-end, $alignItems: center, $flexWrap: nowrap, $gap: 18px);
    }
 
    .lang-switcher {
@@ -69,7 +82,7 @@
    }
 
    .top-list {
-      @include flex-container($justifyContent: flex-end, $alignItems: center, $gap: 18px);
+      @include flex-container($justifyContent: flex-end, $alignItems: center, $flexWrap: nowrap, $gap: 18px);
       list-style: none;
 
       li {
@@ -136,7 +149,7 @@
    }
 
    .nav {
-      @include flex-container($justifyContent: flex-end, $gap: 15px);
+      @include flex-container($justifyContent: flex-end, $flexWrap: nowrap, $gap: 15px);
       padding-bottom: 3px;
 
       &__link {
@@ -180,4 +193,149 @@
       &__icon {
          color: #FFFFFF;
       }
+   }
+
+   .hero {
+      position: relative;
+
+      &__banner {
+         position: relative;
+         min-height: 684px;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         padding-top: 275px;
+         align-items: center;
+      }
+
+      &__title {
+         position: relative;
+         z-index: 1;
+         color: #FFFFFF;
+         text-align: center;
+         max-width: 800px;
+      }
+
+      &__scroll-btn {
+         position: absolute;
+         bottom: 25px;
+         left: 50%;
+         transform: translateX(-50%);
+         z-index: 1;
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+      &__scroll-icon {
+         width: 42px;
+         height: 42px;
+         color: #ffffff;
+         transition: color 0.3s ease;
+
+         &:hover {
+            color: $color-accent;
+         }
+      }
+   }
+
+   .tabs__container {
+      max-width: 1080px;
+      margin: 0 auto;
+
+   }
+
+   #tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+
+      ul {
+         list-style: none;
+         max-width: 375px;
+         // width: 100%;
+         flex-shrink: 0;
+         flex-grow: 0;
+         padding-right: 60px;
+         border-right: 4px solid rgba(255, 255, 255, 0.3);
+      }
+
+      li {
+         display: flex;
+         justify-content: flex-end;
+         background: transparent;
+         margin-bottom: 0;
+
+         a {
+            display: inline-block;
+            padding: 15px 0 15px 0;
+            @include font($color-grey-text, 700, 38px, 46px, 0);
+            white-space: nowrap;
+            transition: color 0.3s ease;
+
+            &:hover {
+               color: $color-accent;
+            }
+         }
+
+         &.ui-tabs-active {
+            a {
+               background-image: $gradient-red-text;
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+               -moz-background-clip: text;
+               -moz-text-fill-color: transparent;
+            }
+         }
+      }
+   }
+
+
+
+   .ui-tabs-panel {
+      flex: 1;
+      max-width: 581px;
+      // width: 100%;
+      margin-left: 60px;
+      padding: 49px 0;
+
+      h2 {
+         @include font(#FFFFFF, 700, 30px, 37px, 0);
+         padding-bottom: 30px;
+         white-space: nowrap;
+      }
+
+      p {
+         @include font(#FFFFFF, 400, 19px, 30px, 0);
+      }
+   }
+
+   // Адаптив
+
+   @media screen and (min-width: 1920px) {
+      .gradient {
+         &__bg-symbol {
+            width: 100%;
+            max-width: 873px;
+            height: 100%;
+            max-height: 1000px;
+         }
+      }
+
+      .hero {
+         &__banner {
+            min-height: 884px;
+            padding-top: 369px;
+         }
+      }
+
+      .tabs__container {
+         max-width: 1360px;
+      }
+
+      .ui-tabs-panel {
+         max-width: 861px;
+         padding: 73px 0;
+      }
+
    }

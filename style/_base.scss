@@ -100,25 +100,25 @@ $gradient-red-text: linear-gradient(90.13deg,
         background-image: $gradient-red-text;
 }
 
-h1 {
-        @include font(null, 700, 38px, 100%, 0);
+.h1 {
+        @include font(null, 700, 38px, 28px, 0);
 }
 
 h2 {
-        @include font($color-main-regular, 700, 30px, 100%, 0);
+        @include font($color-main-regular, 700, 30px, 37px, 0);
 }
 
 h3 {
-        @include font($color-main-regular, 700, 22px, 100%, 0);
+        @include font($color-main-regular, 700, 22px, 27px, 0);
 }
 
 .h3caps {
-        @include font($color-main-regular, 700, 14px, 100%, 1);
+        @include font($color-main-regular, 700, 14px, 17px, 1);
         text-transform: uppercase;
 }
 
 h4 {
-        @include font($color-main-regular, 700, 16px, 100%, 0);
+        @include font($color-main-regular, 700, 16px, 20px, 0);
 }
 
 p {
@@ -207,7 +207,7 @@ ol {
 }
 
 .header.mobile {
-        display: block;
+        display: none;
 
         .header__top {
                 display: flex;
@@ -218,12 +218,12 @@ ol {
         }
 
         .header__container {
-                padding: 15px 15px 0; // відступ для блоку з логотипом
+                padding: 15px 15px 0; 
         }
 }
 
 .header.desctop {
-        display: none;
+        display: block;
 }
 
 .header-mobile-dropdown {
@@ -294,12 +294,51 @@ ol {
 }
 
 // header
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1023px) {
         .header.mobile {
-                display: none;
+                display: block;
         }
 
         .header.desctop {
-                display: block;
+                display: none;
         }
+}
+
+// Адаптив
+.container {
+   max-width: calc(1320px + 60px + 60px);
+   margin: 0 auto;
+   padding: 0 60px;
+}
+
+@media screen and (min-width: 1920px) {
+   .container {
+      padding: 0 160px;
+      max-width: calc(1600px + 160px + 160px); 
+   }
+}
+
+@media screen and (max-width: 1439px) {
+   .container {
+      max-width: calc(904px + 60px + 60px); 
+   }
+}
+
+@media screen and (max-width: 1023px) {
+   .container {
+      max-width: calc(650px + 60px + 60px); 
+   }
+}
+
+@media screen and (max-width: 767px) {
+   .container {
+      padding: 0 30px;
+      max-width: 100%;
+   }
+}
+
+@media screen and (max-width: 375px) {
+   .container {
+      padding: 0 15px; 
+   }
 }
