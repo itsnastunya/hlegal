@@ -2,11 +2,12 @@
 
    .gradient {
       position: relative;
-      overflow: hidden;
       background: $gradient-supersoft;
+      border-radius: 0 0 12px 12px;
 
       &__bg-symbol {
          position: absolute;
+         overflow: hidden;
          top: 0;
          left: 50%;
          transform: translateX(-50%);
@@ -17,183 +18,34 @@
          pointer-events: none;
          z-index: 0;
       }
-   }
 
-
-   .header {
-      position: relative;
-      z-index: 1;
-
-      &__container {
-         @include flex-container($justifyContent: space-between, $alignItems: center, $flexWrap: nowrap);
-         padding-top: 50px;
+      &::before {
+         content: '';
+         position: absolute;
+         bottom: -10px;
+         left: 20px;
+         right: 20px;
+         height: 10px;
+         background-color: rgba(202, 202, 219, 1);
+         border-radius: 0 0 12px 12px;
+         z-index: -1;
       }
-
-      &__logo {
-         display: inline-flex;
-         align-items: center;
-
-         &-slash {
-            color: $color-accent;
-            font-size: 24px;
-            font-weight: 700;
-            margin: 0 6px;
-         }
-
-         &-text {
-            @include font(#FFFFFF, 400, 20px, 1, 0);
-         }
-      }
-
-   }
-
-   .header-content {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 18px;
-   }
-
-   .top-block {
-      @include flex-container($justifyContent: flex-end, $alignItems: center, $flexWrap: nowrap, $gap: 18px);
-   }
-
-   .lang-switcher {
-      display: flex;
-      align-items: center;
-      gap: 0;
-   }
-
-   .small-btn {
-      @include font(#FFFFFF, 700, 12px, 100%, 1px);
-      padding: 5px 7px;
-      border-radius: 8px;
-      background: transparent;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      &.active,
-      &:hover {
-         background: $color-accent;
-      }
-   }
-
-   .top-list {
-      @include flex-container($justifyContent: flex-end, $alignItems: center, $flexWrap: nowrap, $gap: 18px);
-      list-style: none;
-
-      li {
-         display: flex;
-         align-items: center;
-         margin-bottom: 0;
-         height: 100%;
-      }
-
-      &__address,
-      &__phone {
-         @include font(#FFFFFF, 400, 16px, 1, 0);
-         display: inline-flex;
-         align-items: center;
-         transition: color 0.2s ease;
-
-         &:hover {
-            color: $color-accent;
-         }
-      }
-
-      &__phone {
-         font-weight: 700;
-      }
-
-      &__social {
-         display: flex;
-         align-items: center;
-         height: 24px;
-      }
-
-      &__social-icon {
-         fill: #FFFFFF;
-         transition: fill 0.2s ease;
-
-         &:hover {
-            fill: $color-accent;
-         }
-      }
-   }
-
-   .top-list__social {
-      display: flex;
-      align-items: center;
-   }
-
-   .top-block>*:not(:last-child),
-   .top-list>li:not(:last-child) {
-      position: relative;
 
       &::after {
          content: '';
          position: absolute;
-         top: 50%;
-         right: -9px;
-         transform: translate(50%, -50%);
-
-         width: 6px;
-         height: 6px;
-         background-color: $color-grey-separator;
-         border-radius: 50%;
-         pointer-events: none;
+         bottom: -20px;
+         left: 40px;
+         right: 40px;
+         height: 10px;
+         background-color: rgba(231, 231, 242, 1);
+         border-radius: 0 0 12px 12px;
+         z-index: -2;
       }
    }
 
-   .nav {
-      @include flex-container($justifyContent: flex-end, $flexWrap: nowrap, $gap: 15px);
-      padding-bottom: 3px;
 
-      &__link {
-         @include font(#FFFFFF, 700, 16px, 100%, 0);
-         transition: color 0.5s ease;
-         position: relative;
 
-         &::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -3px;
-            width: 100%;
-            height: 2px;
-            background-color: currentColor;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.5s ease;
-         }
-
-         &:hover::after {
-            transform: scaleX(1);
-         }
-
-         &--active {
-            color: $color-accent;
-
-            &::after {
-               transform: scaleX(1);
-               background-color: $color-accent;
-            }
-         }
-      }
-   }
-
-   .burger-menu {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-
-      &__icon {
-         color: #FFFFFF;
-      }
-   }
 
    .hero {
       position: relative;
@@ -310,6 +162,64 @@
       }
    }
 
+   .services {
+      padding-top: 50px;
+      padding-bottom: 60px;
+
+      &__subtitle {
+         display: inline-flex;
+         align-items: center;
+         gap: 2px;
+         margin-bottom: 10px;
+
+         &-icon {
+            stroke: $color-active-regular;
+            fill: none;
+            transition: stroke 0.3s ease;
+         }
+
+         &:hover {
+            color: $color-accent;
+
+            .services__subtitle-icon {
+               stroke: $color-accent;
+            }
+         }
+      }
+
+      &__title {
+         margin-bottom: 60px;
+      }
+
+      &__grid {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 60px;
+      }
+
+      &__card {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+      }
+
+      &__card-icon {
+         width: 92px;
+         height: 92px;
+         margin-bottom: 30px;
+         flex-shrink: 0;
+      }
+
+      &__card-title {
+         color: $color-active-regular;
+         margin-bottom: 15px;
+      }
+
+      &__card-text {
+         color: #FFFFFF;
+      }
+   }
+
    // Адаптив
 
    @media screen and (min-width: 1920px) {
@@ -338,6 +248,11 @@
          padding: 73px 0;
       }
 
+      .footer {
+         &__container.container {
+            max-width: 1600px;
+         }
+      }
    }
 
    @media screen and (max-width: 1024px) {
@@ -369,6 +284,12 @@
             white-space: normal;
          }
       }
+
+      .footer {
+         &__container.container {
+            max-width: 904px;
+         }
+      }
    }
 
    @media screen and (max-width: 768px) {
@@ -376,7 +297,7 @@
          &__bg-symbol {
             width: 100%;
             max-width: 893.28px;
-            height: 100%;
+            height: 1024px;
             max-height: 1024px;
          }
       }
@@ -384,67 +305,147 @@
       .hero {
          &__banner {
             min-height: 804px;
-            padding-top: 269px;
+            padding-top: 405px;
+         }
+
+         &__scroll-btn {
+            bottom: -100px;
          }
       }
 
       .tabs__container {
-      max-width: 904px;
-      padding: 60px;
-   }
+         max-width: 904px;
+         padding: 60px;
+      }
 
-   #tabs {
-      flex-direction: column;
-      align-items: stretch;
+      #tabs {
+         flex-direction: column;
+         align-items: stretch;
+         margin-top: 130px;
 
-      ul {
-         display: flex;
-         flex-direction: row;
-         flex-wrap: nowrap;
-         max-width: 100%;
-         width: auto;
-         flex-shrink: 0;
-         gap: 30px;
+         ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            max-width: 100%;
+            width: auto;
+            flex-shrink: 0;
+            gap: 30px;
 
-         padding-right: 0;
-         padding-bottom: 15px;
-         border-right: none;
-         border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+            padding-right: 0;
+            padding-bottom: 15px;
+            border-right: none;
+            border-bottom: 4px solid rgba(255, 255, 255, 0.3);
 
-         overflow-x: auto;
-         -ms-overflow-style: none;
-         scrollbar-width: none;
+            overflow-x: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
 
-         &::-webkit-scrollbar {
-            display: none;
+            &::-webkit-scrollbar {
+               display: none;
+            }
+         }
+
+         li {
+            justify-content: flex-start;
+            flex-shrink: 0;
+
+            a {
+               white-space: nowrap;
+               padding: 0 0 45px 0;
+            }
          }
       }
 
-      li {
-         justify-content: flex-start;
-         flex-shrink: 0;
+      .ui-tabs-panel {
+         max-width: 648px;
+         margin-left: 0;
+         padding: 60px 0 0;
 
-         a {
-            white-space: nowrap;
-            padding: 0 0 8px 0;
+         h2 {
+            white-space: normal;
+         }
+      }
+
+      .services {
+         padding-top: 0;
+
+         &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+         }
+      }
+
+      .footer {
+         padding-bottom: 0;
+
+         &__container.container {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding-left: 185px;
+            padding-right: 185px;
+            padding-bottom: 30px;
+            max-width: 100%;
+         }
+
+         &__info {
+            align-items: center;
+         }
+
+         &__row {
+            justify-content: center;
          }
       }
    }
 
-   .ui-tabs-panel {
-      max-width: 648px;
-      margin-left: 0;
-      padding: 30px 0 0;
+   @media screen and (max-width: 576px) {
+      .services {
+         h2 {
+            font-size: 30px;
+         }
 
-      h2 {
-         white-space: normal;
+         padding-top: 30px;
+         padding-bottom: 30px;
+
+         &__title {
+            margin-bottom: 30px;
+         }
+
+         &__grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+         }
       }
-   }
 
+      .footer {
+         &__container.container {
+            padding-left: 30px;
+            padding-right: 30px;
+         }
+
+         &__info {
+            gap: 12px;
+         }
+
+         &__row {
+            flex-direction: column;
+            gap: 10px;
+
+            >*:not(:last-child) {
+               margin-right: 0;
+               padding-right: 0;
+
+               &::after {
+                  display: none;
+               }
+            }
+         }
+      }
    }
 
    @media screen and (max-width: 375px) {
-       .gradient {
+      .gradient {
          &__bg-symbol {
             width: 100%;
             max-width: 523px;
@@ -456,15 +457,42 @@
       .hero {
          &__banner {
             min-height: 498px;
-            padding-top: 129px;
+            padding-top: 145px;
          }
 
          &__title {
-         max-width: 315px;
+            max-width: 315px;
+            max-height: 138px;
+         }
+
+         &__scroll-btn {
+            bottom: 18px;
+         }
       }
+
+      .tabs__container {
+         max-width: 100%;
+         padding: 0 30px;
+      }
+
+      #tabs {
+         margin-top: 40px;
+
+         ul li a {
+            font-size: 30px;
+            padding: 0 0 10px 0;
+         }
       }
 
       .ui-tabs-panel {
-      max-width: 315px;
+         max-width: 315px;
+         padding: 30px 0 0;
+
+         h2 {
+            font-size: 20px;
+            line-height: 100%;
+         }
       }
+
+
    }
