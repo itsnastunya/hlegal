@@ -220,6 +220,102 @@
       }
    }
 
+   .slider-wrapper {
+      margin-top: 80px;
+
+      .slick-slide {
+         margin: 0 10px;
+      }
+
+      img {
+         border-top-left-radius: 12px;
+         border-bottom-left-radius: 12px;
+         object-fit: cover;
+         width: 100%;
+      }
+
+      &__item {
+         display: flex;
+         justify-content: space-between;
+
+         @media screen and (min-width: 1440px) {
+            max-height: 344px;
+         }
+      }
+
+      &__right-content {
+         padding: 30px;
+         background: $color-grey-bg;
+         border-top-right-radius: 12px;
+         border-bottom-right-radius: 12px;
+
+         h5 {
+            color: $color-active-regular;
+            margin-bottom: 5px;
+         }
+
+         .gradient-text {
+            margin-bottom: 30px;
+            line-height: 46px;
+
+               @media screen and (max-width: 576px) {
+                  font-size: 30px;
+                  line-height: 36px;
+               }
+
+         }
+
+         h4 {
+            color: $color-grey-text;
+         }
+
+         p {
+            @include font($color-grey-text, 400, 14px, 22px, 0);
+            margin-top: 6px;
+         }
+      }
+
+      .slick-dots {
+         bottom: -50px;
+      }
+
+      .slick-dots li {
+         button:before {
+            color: $color-active-regular;
+            font-size: 16px;
+         }
+
+         &slick-active button:before {
+            color: $color-active-regular;
+            opacity: 1;
+         }
+      }
+
+      @media screen and (max-width: 1023px) {
+         img {
+            height: 500px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            border-bottom-left-radius: 0;
+         }
+         &__item{
+            flex-direction: column;
+         }
+         &__right-content{
+            border-bottom-right-radius: 12px;
+            border-bottom-left-radius: 12px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+         }
+
+      }
+      @media screen and (max-width: 568px) {
+         img {
+            height: 300px;
+         }
+   }
+}
+
    // Адаптив
 
    @media screen and (min-width: 1920px) {
@@ -284,6 +380,8 @@
             white-space: normal;
          }
       }
+
+
 
       .footer {
          &__container.container {

@@ -26,7 +26,7 @@ body {
 .h1 {
   font-weight: 700;
   font-size: 38px;
-  line-height: 100%;
+  line-height: 28px;
   letter-spacing: 0;
   letter-spacing: 0;
 }
@@ -793,6 +793,95 @@ ol li::marker {
 }
 .services__card-text {
   color: #FFFFFF;
+}
+
+.slider-wrapper {
+  margin-top: 80px;
+}
+.slider-wrapper .slick-slide {
+  margin: 0 10px;
+}
+.slider-wrapper img {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.slider-wrapper__item {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1440px) {
+  .slider-wrapper__item {
+    max-height: 344px;
+  }
+}
+.slider-wrapper__right-content {
+  padding: 30px;
+  background: #F5F5FA;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.slider-wrapper__right-content h5 {
+  color: #24A3FF;
+  margin-bottom: 5px;
+}
+.slider-wrapper__right-content .gradient-text {
+  margin-bottom: 30px;
+  line-height: 46px;
+}
+@media screen and (max-width: 576px) {
+  .slider-wrapper__right-content .gradient-text {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+.slider-wrapper__right-content h4 {
+  color: #B3B3BA;
+}
+.slider-wrapper__right-content p {
+  color: #B3B3BA;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: #B3B3BA;
+  letter-spacing: 0;
+  margin-top: 6px;
+}
+.slider-wrapper .slick-dots {
+  bottom: -50px;
+}
+.slider-wrapper .slick-dots li button:before {
+  color: #24A3FF;
+  font-size: 16px;
+}
+.slider-wrapper .slick-dots lislick-active button:before {
+  color: #24A3FF;
+  opacity: 1;
+}
+@media screen and (max-width: 1023px) {
+  .slider-wrapper img {
+    height: 500px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0;
+  }
+  .slider-wrapper__item {
+    flex-direction: column;
+  }
+  .slider-wrapper__right-content {
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+@media screen and (max-width: 568px) {
+  .slider-wrapper img {
+    height: 300px;
+  }
 }
 
 @media screen and (min-width: 1920px) {
