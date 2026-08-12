@@ -17,6 +17,9 @@
          max-height: 799px;
          pointer-events: none;
          z-index: 0;
+
+         object-fit: cover;
+         object-position: top center;
       }
 
       &::before {
@@ -334,11 +337,12 @@
             padding-right: 0;
             max-width: 100%;
          }
+
          @media screen and (min-width: 1920px) {
             max-width: 1920px;
             padding-left: 100px;
             padding-right: 100px;
-        }
+         }
       }
 
       &__grid {
@@ -352,14 +356,15 @@
             margin: 0 auto;
             border-radius: 12px;
             overflow: hidden;
-        }
-        @media screen and (max-width: 768px) {
-            grid-template-columns: repeat(3, 1fr);
-        }
+         }
 
-        @media screen and (max-width: 576px) {
+         @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+         }
+
+         @media screen and (max-width: 576px) {
             grid-template-columns: 1fr;
-        }
+         }
       }
 
       &__item {
@@ -568,6 +573,29 @@
    }
 
    @media screen and (max-width: 576px) {
+       .gradient {
+         &__bg-symbol {
+            width: 100%;
+            max-width: 523px;
+            height: 100%;
+            max-height: 600px;
+         }
+         .hero {
+         &__banner {
+            min-height: 498px;
+            padding-top: 145px;
+         }
+
+         &__title {
+            max-width: 315px;
+            max-height: 138px;
+         }
+
+         &__scroll-btn {
+            bottom: 18px;
+         }
+      }
+      }
       .services {
          h2 {
             font-size: 30px;
@@ -613,30 +641,9 @@
    }
 
    @media screen and (max-width: 375px) {
-      .gradient {
-         &__bg-symbol {
-            width: 100%;
-            max-width: 523px;
-            height: 100%;
-            max-height: 600px;
-         }
-      }
+     
 
-      .hero {
-         &__banner {
-            min-height: 498px;
-            padding-top: 145px;
-         }
-
-         &__title {
-            max-width: 315px;
-            max-height: 138px;
-         }
-
-         &__scroll-btn {
-            bottom: 18px;
-         }
-      }
+      
 
       .tabs__container {
          max-width: 100%;
