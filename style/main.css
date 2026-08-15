@@ -591,6 +591,56 @@ ol li::marker {
   letter-spacing: 0;
 }
 
+@media screen and (min-width: 1920px) {
+  .footer__container.container {
+    max-width: 1600px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .footer__container.container {
+    max-width: 904px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-bottom: 0;
+  }
+  .footer__container.container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-left: 185px;
+    padding-right: 185px;
+    padding-bottom: 30px;
+    max-width: 100%;
+  }
+  .footer__info {
+    align-items: center;
+  }
+  .footer__row {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer__container.container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .footer__info {
+    gap: 12px;
+  }
+  .footer__row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer__row > *:not(:last-child) {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .footer__row > *:not(:last-child)::after {
+    display: none;
+  }
+}
 .gradient {
   position: relative;
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
@@ -1103,9 +1153,6 @@ ol li::marker {
     max-width: 861px;
     padding: 73px 0;
   }
-  .footer__container.container {
-    max-width: 1600px;
-  }
 }
 @media screen and (max-width: 1024px) {
   .gradient__bg-symbol {
@@ -1127,9 +1174,6 @@ ol li::marker {
   }
   .ui-tabs-panel h2 {
     white-space: normal;
-  }
-  .footer__container.container {
-    max-width: 904px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1197,24 +1241,6 @@ ol li::marker {
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
   }
-  .footer {
-    padding-bottom: 0;
-  }
-  .footer__container.container {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding-left: 185px;
-    padding-right: 185px;
-    padding-bottom: 30px;
-    max-width: 100%;
-  }
-  .footer__info {
-    align-items: center;
-  }
-  .footer__row {
-    justify-content: center;
-  }
 }
 @media screen and (max-width: 576px) {
   .gradient__bg-symbol {
@@ -1266,23 +1292,5 @@ ol li::marker {
   .services__grid {
     grid-template-columns: 1fr;
     gap: 30px;
-  }
-  .footer__container.container {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  .footer__info {
-    gap: 12px;
-  }
-  .footer__row {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .footer__row > *:not(:last-child) {
-    margin-right: 0;
-    padding-right: 0;
-  }
-  .footer__row > *:not(:last-child)::after {
-    display: none;
   }
 }/*# sourceMappingURL=main.css.map */

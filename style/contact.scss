@@ -1,0 +1,61 @@
+@import 'base';
+
+.header--light {
+   .header__logo-text {
+      color: $color-main-regular;
+   }
+
+   .small-btn {
+      color: $color-grey-text;
+
+      &.active,
+      &:hover {
+         color: #FFFFFF;
+         background: $color-accent;
+      }
+   }
+
+   .top-list {
+      &__address,
+      &__phone {
+         color: $color-grey-text;
+
+         &:hover {
+            color: $color-accent;
+         }
+      }
+
+      &__social-icon {
+         fill: $color-grey-text;
+
+         &:hover {
+            fill: $color-accent;
+         }
+      }
+   }
+
+   .top-block > *:not(:last-child)::after,
+   .top-list > li:not(:last-child)::after {
+      background-color: $color-grey-text;
+   }
+
+   .nav__link {
+      color: $color-active-regular;
+
+      &:hover {
+         color: $color-accent;
+      }
+
+      &--active {
+         color: $color-accent;
+
+         &::after {
+            background-color: $color-accent;
+         }
+      }
+   }
+
+   .burger-menu__icon {
+      color: $color-main-regular;
+   }
+}
