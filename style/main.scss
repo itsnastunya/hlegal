@@ -324,9 +324,10 @@
 
    .clients {
       padding-top: 60px;
+
       @media screen and (min-width: 1920px) {
-        padding-bottom: 60px;
-    }
+         padding-bottom: 60px;
+      }
 
       &__title {
          text-align: center;
@@ -382,9 +383,9 @@
 
          @media screen and (max-width: 576px) {
             &:nth-child(n + 7) {
-                display: none;
+               display: none;
             }
-        }
+         }
       }
 
       &__img {
@@ -397,19 +398,20 @@
 
    }
 
- 
+
    .publications {
       background-color: $color-grey-bg;
       padding-top: 30px;
 
-      .h1{
+      .h1 {
          line-height: 46px;
       }
-       @media screen and (max-width: 576px) {
-            .h1{
-               font-size: 30px;
-            }
+
+      @media screen and (max-width: 576px) {
+         .h1 {
+            font-size: 30px;
          }
+      }
 
       &__subtitle {
          display: inline-flex;
@@ -418,20 +420,20 @@
          margin-bottom: 10px;
 
          &-icon {
-            fill: none; 
-            stroke: $color-active-regular; 
+            fill: none;
+            stroke: $color-active-regular;
             transition: fill 0.3s ease, stroke 0.3s ease;
-        }
+         }
 
-        &:hover {
-            color: $color-accent; 
+         &:hover {
+            color: $color-accent;
 
             .publications__subtitle-icon {
-                fill: $color-accent; 
-                stroke: $color-accent;
+               fill: $color-accent;
+               stroke: $color-accent;
             }
+         }
       }
-   }
 
       &__title {
          margin-bottom: 30px;
@@ -443,24 +445,20 @@
          gap: 30px;
 
          @media screen and (max-width: 1024px) {
-            grid-template-columns: repeat(2, 1fr); // Переходимо на 2 колонки
+            grid-template-columns: repeat(2, 1fr);
 
-            // Третя картка розтягується на 2 колонки другого ряду
             .publications__card:nth-child(3) {
-                grid-column: span 2;
+               grid-column: span 2;
             }
-        }
+         }
 
-        // Для мобільних екранів (576px і нижче)
-        @media screen and (max-width: 576px) {
-            grid-template-columns: 1fr; // Переходимо в 1 колонку
-            
+         @media screen and (max-width: 576px) {
+            grid-template-columns: 1fr;
 
-            // Скидаємо розтягування для мобільної версії
             .publications__card:nth-child(3) {
-                grid-column: span 1;
+               grid-column: span 1;
             }
-        }
+         }
       }
 
       &__card {
@@ -507,22 +505,23 @@
                transition: color 0.3s ease;
             }
          }
+
          &-date {
             @include font($color-grey-text, 700, 12px, 15px, 1px);
             text-transform: uppercase;
             padding-bottom: 15px;
             margin-bottom: 15px;
-            border-bottom: 4px solid $color-grey-separator; 
-        }
+            border-bottom: 4px solid $color-grey-separator;
+         }
 
-        &-text {
+         &-text {
             @include font(#000000, 400, 14px, 22px, 0);
             margin-bottom: 0;
-        }
+         }
       }
    }
 
-   
+
 
 
    // Адаптив
@@ -551,12 +550,6 @@
       .ui-tabs-panel {
          max-width: 861px;
          padding: 73px 0;
-      }
-
-      .footer {
-         &__container.container {
-            max-width: 1600px;
-         }
       }
    }
 
@@ -587,14 +580,6 @@
 
          h2 {
             white-space: normal;
-         }
-      }
-
-
-
-      .footer {
-         &__container.container {
-            max-width: 904px;
          }
       }
    }
@@ -682,28 +667,6 @@
             gap: 60px;
          }
       }
-
-      .footer {
-         padding-bottom: 0;
-
-         &__container.container {
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            padding-left: 185px;
-            padding-right: 185px;
-            padding-bottom: 30px;
-            max-width: 100%;
-         }
-
-         &__info {
-            align-items: center;
-         }
-
-         &__row {
-            justify-content: center;
-         }
-      }
    }
 
    @media screen and (max-width: 576px) {
@@ -732,7 +695,7 @@
          }
       }
 
-         .tabs__container {
+      .tabs__container {
          max-width: 100%;
          padding: 0 30px;
       }
@@ -755,58 +718,23 @@
             line-height: 100%;
          }
       }
-      
-       .services {
-      h2 {
-         font-size: 30px;
-      }
 
-      padding-top: 30px;
-      padding-bottom: 30px;
+      .services {
+         h2 {
+            font-size: 30px;
+         }
 
-      &__title {
-         margin-bottom: 30px;
-      }
+         padding-top: 30px;
+         padding-bottom: 30px;
 
-      &__grid {
-         grid-template-columns: 1fr;
-         gap: 30px;
-      }
-   }
+         &__title {
+            margin-bottom: 30px;
+         }
 
-    .footer {
-      &__container.container {
-         padding-left: 30px;
-         padding-right: 30px;
-      }
-
-      &__info {
-         gap: 12px;
-      }
-
-      &__row {
-         flex-direction: column;
-         gap: 10px;
-
-         >*:not(:last-child) {
-            margin-right: 0;
-            padding-right: 0;
-
-            &::after {
-               display: none;
-            }
+         &__grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
          }
       }
    }
-   }
 
-   
-   
-
-   @media screen and (max-width: 375px) {
-   
-       
-
-
-     
-   }
