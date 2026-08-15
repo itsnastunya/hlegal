@@ -1,61 +1,268 @@
 @import 'base';
 
 .header--light {
-   .header__logo-text {
-      color: $color-main-regular;
-   }
+    .header__logo-text {
+        color: $color-main-regular;
+    }
 
-   .small-btn {
-      color: $color-grey-text;
+    .small-btn {
+        color: $color-grey-text;
 
-      &.active,
-      &:hover {
-         color: #FFFFFF;
-         background: $color-accent;
-      }
-   }
+        &.active,
+        &:hover {
+            color: #FFFFFF;
+            background: $color-accent;
+        }
+    }
 
-   .top-list {
-      &__address,
-      &__phone {
-         color: $color-grey-text;
+    .top-list {
 
-         &:hover {
+        &__address,
+        &__phone {
+            color: $color-grey-text;
+
+            &:hover {
+                color: $color-accent;
+            }
+        }
+
+        &__social-icon {
+            fill: $color-grey-text;
+
+            &:hover {
+                fill: $color-accent;
+            }
+        }
+    }
+
+    .top-block>*:not(:last-child)::after,
+    .top-list>li:not(:last-child)::after {
+        background-color: $color-grey-text;
+    }
+
+    .nav__link {
+        color: $color-active-regular;
+
+        &:hover {
             color: $color-accent;
-         }
-      }
+        }
 
-      &__social-icon {
-         fill: $color-grey-text;
+        &--active {
+            color: $color-accent;
 
-         &:hover {
-            fill: $color-accent;
-         }
-      }
-   }
+            &::after {
+                background-color: $color-accent;
+            }
+        }
+    }
 
-   .top-block > *:not(:last-child)::after,
-   .top-list > li:not(:last-child)::after {
-      background-color: $color-grey-text;
-   }
+    .burger-menu__icon {
+        color: $color-main-regular;
+    }
+}
 
-   .nav__link {
-      color: $color-active-regular;
+.contacts {
+    padding-top: 60px;
+    padding-bottom: 60px;
 
-      &:hover {
-         color: $color-accent;
-      }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+        padding-left: 180px;
+        padding-right: 180px;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
 
-      &--active {
-         color: $color-accent;
+    &__info {
+        display: flex;
+        flex-direction: column;
+        max-width: 510px;
+        width: 100%;
+    }
 
-         &::after {
-            background-color: $color-accent;
-         }
-      }
-   }
+    &__block {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 2px solid $color-grey-separator;
 
-   .burger-menu__icon {
-      color: $color-main-regular;
-   }
+        &:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__address {
+        @include font($color-main-regular, 400, 21px, 30px, 0);
+        display: block;
+        margin-bottom: 0;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $color-accent;
+        }
+    }
+
+    &__phone {
+        @include font($color-main-alt, 400, 21px, 30px, 0);
+        display: block;
+        margin-bottom: 15px;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $color-accent;
+        }
+    }
+
+    &__email {
+        @include font($color-active-regular, 400, 21px, 30px, 0);
+        display: block;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $color-accent;
+        }
+    }
+
+    &__social {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        &-icon {
+            fill: $color-active-regular;
+            transition: fill 0.3s ease;
+        }
+
+        &-text {
+            @include font($color-active-regular, 700, 12px, 16px, 1px);
+            text-transform: uppercase;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        &:hover {
+            .contacts__social-icon {
+                fill: $color-accent;
+            }
+
+            .contacts__social-text {
+                color: $color-accent;
+            }
+        }
+    }
+
+    &__form-wrapper {
+    background-color: $color-grey-bg;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 510px;
+    width: 100%;
+}
+
+&__form-title {
+    margin-bottom: 30px;
+}
+
+&__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+&__textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+&__form-subtitle {
+    color: $color-grey-text;
+    margin-top: 15px;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+}
+
+&__submit-btn {
+    width: 100%;
+    margin-top: 15px;
+}
+}
+
+.footer {
+    &__container.container {
+        border-top: none;
+        padding-top: 0;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .contacts {
+        &__container {
+            max-width: 1920px;
+            padding-left: 280px;
+            padding-right: 280px;
+        }
+
+        &__info {
+            max-width: 650px;
+        }
+
+        &__form-wrapper {
+            max-width: 650px;
+        }
+    }
+}
+
+@media screen and (max-width: 1439px) {
+    .contacts {
+        &__container {
+            max-width: 1024px;
+            padding-left: 60px;
+            padding-right: 60px;
+            gap: 60px;
+        }
+
+        &__info,
+        &__form-wrapper {
+            max-width: 422px;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .contacts {
+        &__container {
+            flex-direction: column;
+            padding-left: 60px;
+            padding-right: 60px;
+            gap: 60px;
+        }
+
+        &__info,
+        &__form-wrapper {
+            max-width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .contacts {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        &__container {
+            padding-left: 30px;
+            padding-right: 30px;
+            gap: 30px;
+        }
+
+        &__form-wrapper {
+            padding: 30px;
+        }
+
+        &__form-title {
+            margin-bottom: 30px;
+        }
+    }
 }
