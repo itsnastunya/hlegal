@@ -206,6 +206,46 @@ ol {
         }
 }
 
+// Адаптив
+.container {
+        max-width: calc(1320px + 60px + 60px);
+        margin: 0 auto;
+        padding: 0 60px;
+}
+
+@media screen and (min-width: 1920px) {
+        .container {
+                padding: 0 160px;
+                max-width: calc(1600px + 160px + 160px);
+        }
+}
+
+@media screen and (max-width: 1439px) {
+        .container {
+                max-width: calc(904px + 60px + 60px);
+        }
+}
+
+@media screen and (max-width: 1023px) {
+        .container {
+                max-width: calc(650px + 60px + 60px);
+        }
+}
+
+@media screen and (max-width: 767px) {
+        .container {
+                padding: 0 30px;
+                max-width: 100%;
+        }
+}
+
+
+@media screen and (max-width: 375px) {
+        .container {
+                padding: 0 15px;
+        }
+}
+
 // header
 
 .header.mobile {
@@ -484,7 +524,6 @@ ol {
 
 // footer
 .footer {
-        margin-top: 30px;
         background-color: $color-grey-bg;
         padding: 30px 0;
 
@@ -578,42 +617,3 @@ ol {
         }
 }
 
-// Адаптив
-.container {
-        max-width: calc(1320px + 60px + 60px);
-        margin: 0 auto;
-        padding: 0 60px;
-}
-
-@media screen and (min-width: 1920px) {
-        .container {
-                padding: 0 160px;
-                max-width: calc(1600px + 160px + 160px);
-        }
-}
-
-@media screen and (max-width: 1439px) {
-        .container {
-                max-width: calc(904px + 60px + 60px);
-        }
-}
-
-@media screen and (max-width: 1023px) {
-        .container {
-                max-width: calc(650px + 60px + 60px);
-        }
-}
-
-@media screen and (max-width: 767px) {
-        .container {
-                padding: 0 30px;
-                max-width: 100%;
-        }
-}
-
-
-@media screen and (max-width: 375px) {
-        .container {
-                padding: 0 15px;
-        }
-}

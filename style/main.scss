@@ -324,7 +324,9 @@
 
    .clients {
       padding-top: 60px;
-      padding-bottom: 60px;
+      @media screen and (min-width: 1920px) {
+        padding-bottom: 60px;
+    }
 
       &__title {
          text-align: center;
@@ -377,6 +379,12 @@
          &:hover {
             opacity: 0.7;
          }
+
+         @media screen and (max-width: 576px) {
+            &:nth-child(n + 7) {
+                display: none;
+            }
+        }
       }
 
       &__img {
@@ -389,6 +397,132 @@
 
    }
 
+ 
+   .publications {
+      background-color: $color-grey-bg;
+      padding-top: 30px;
+
+      .h1{
+         line-height: 46px;
+      }
+       @media screen and (max-width: 576px) {
+            .h1{
+               font-size: 30px;
+            }
+         }
+
+      &__subtitle {
+         display: inline-flex;
+         align-items: center;
+         gap: 2px;
+         margin-bottom: 10px;
+
+         &-icon {
+            fill: none; 
+            stroke: $color-active-regular; 
+            transition: fill 0.3s ease, stroke 0.3s ease;
+        }
+
+        &:hover {
+            color: $color-accent; 
+
+            .publications__subtitle-icon {
+                fill: $color-accent; 
+                stroke: $color-accent;
+            }
+      }
+   }
+
+      &__title {
+         margin-bottom: 30px;
+      }
+
+      &__grid {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 30px;
+
+         @media screen and (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr); // Переходимо на 2 колонки
+
+            // Третя картка розтягується на 2 колонки другого ряду
+            .publications__card:nth-child(3) {
+                grid-column: span 2;
+            }
+        }
+
+        // Для мобільних екранів (576px і нижче)
+        @media screen and (max-width: 576px) {
+            grid-template-columns: 1fr; // Переходимо в 1 колонку
+            
+
+            // Скидаємо розтягування для мобільної версії
+            .publications__card:nth-child(3) {
+                grid-column: span 1;
+            }
+        }
+      }
+
+      &__card {
+         background-color: #FFFFFF;
+         border-radius: 8px;
+         overflow: hidden;
+         display: flex;
+         flex-direction: column;
+         transition: box-shadow 0.3s ease;
+
+         &:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+
+            .publications__card-title a {
+               color: $color-accent;
+            }
+         }
+
+         &-image-link {
+            display: block;
+            height: 200px;
+            overflow: hidden;
+         }
+
+         &-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+         }
+
+         &-body {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+         }
+
+         &-title {
+            margin-bottom: 15px;
+
+            a {
+               @include font($color-active-regular, 700, 16px, 20px, 0);
+               transition: color 0.3s ease;
+            }
+         }
+         &-date {
+            @include font($color-grey-text, 700, 12px, 15px, 1px);
+            text-transform: uppercase;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            border-bottom: 4px solid $color-grey-separator; 
+        }
+
+        &-text {
+            @include font(#000000, 400, 14px, 22px, 0);
+            margin-bottom: 0;
+        }
+      }
+   }
+
+   
 
 
    // Адаптив
@@ -573,79 +707,32 @@
    }
 
    @media screen and (max-width: 576px) {
-       .gradient {
+      .gradient {
          &__bg-symbol {
             width: 100%;
             max-width: 523px;
             height: 100%;
             max-height: 600px;
          }
+
          .hero {
-         &__banner {
-            min-height: 498px;
-            padding-top: 145px;
-         }
+            &__banner {
+               min-height: 498px;
+               padding-top: 145px;
+            }
 
-         &__title {
-            max-width: 315px;
-            max-height: 138px;
-         }
+            &__title {
+               max-width: 315px;
+               max-height: 138px;
+            }
 
-         &__scroll-btn {
-            bottom: 18px;
-         }
-      }
-      }
-      .services {
-         h2 {
-            font-size: 30px;
-         }
-
-         padding-top: 30px;
-         padding-bottom: 30px;
-
-         &__title {
-            margin-bottom: 30px;
-         }
-
-         &__grid {
-            grid-template-columns: 1fr;
-            gap: 30px;
-         }
-      }
-
-      .footer {
-         &__container.container {
-            padding-left: 30px;
-            padding-right: 30px;
-         }
-
-         &__info {
-            gap: 12px;
-         }
-
-         &__row {
-            flex-direction: column;
-            gap: 10px;
-
-            >*:not(:last-child) {
-               margin-right: 0;
-               padding-right: 0;
-
-               &::after {
-                  display: none;
-               }
+            &__scroll-btn {
+               bottom: 18px;
             }
          }
       }
-   }
 
-   @media screen and (max-width: 375px) {
-     
-
-      
-
-      .tabs__container {
+         .tabs__container {
          max-width: 100%;
          padding: 0 30px;
       }
@@ -668,6 +755,58 @@
             line-height: 100%;
          }
       }
+      
+       .services {
+      h2 {
+         font-size: 30px;
+      }
+
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+      &__title {
+         margin-bottom: 30px;
+      }
+
+      &__grid {
+         grid-template-columns: 1fr;
+         gap: 30px;
+      }
+   }
+
+    .footer {
+      &__container.container {
+         padding-left: 30px;
+         padding-right: 30px;
+      }
+
+      &__info {
+         gap: 12px;
+      }
+
+      &__row {
+         flex-direction: column;
+         gap: 10px;
+
+         >*:not(:last-child) {
+            margin-right: 0;
+            padding-right: 0;
+
+            &::after {
+               display: none;
+            }
+         }
+      }
+   }
+   }
+
+   
+   
+
+   @media screen and (max-width: 375px) {
+   
+       
 
 
+     
    }
