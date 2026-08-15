@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
 
-     <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/contact.css">
 </head>
+
 <body>
-   <header class="header desctop header--light">
+    <header class="header desctop header--light">
         <div class="container header__container">
             <a href="index.html" class="header__logo">
                 <svg width="297" height="60">
@@ -26,7 +28,8 @@
                     </div>
 
                     <ul class="top-list">
-                        <li><a href="#" class="top-list__address">Kyiv, Mechnikova str, 14/1</a></li>
+                        <li><a href="https://maps.app.goo.gl/y9jkHgbZWeBHmCza8" class="top-list__address">Kyiv,
+                                Mechnikova str, 14/1</a></li>
                         <li><a class="top-list__phone" href="tel:0800211927">0800 211 927</a></li>
                         <li>
                             <a href="#" class="top-list__social" aria-label="Facebook">
@@ -88,30 +91,87 @@
                 </ul>
             </div>
         </div>
-    </header> 
+    </header>
 
-      <footer class="footer">
-            <div class="container footer__container">
-                <div class="footer__info">
-                    <div class="footer__row">
-                        <span class="footer__address">Kyiv, Mechnikova str, 14/1</span>
-                        <a href="https://maps.app.goo.gl/y9jkHgbZWeBHmCza8" target="_blank" rel="noopener"
-                            class="footer__map">on map</a>
-                    </div>
-
-                    <div class="footer__row">
-                        <a href="#" class="footer__social" aria-label="Facebook">
-                            <svg width="38" height="38" class="footer__social-icon">
-                                <use xlink:href="./sprite.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                        <a href="tel:0800211927" class="footer__phone">0800 211 927</a>
-                        <a href="mailto:contact@forstudy.space" class="footer__email">contact@forstudy.space</a>
-                    </div>
+    <main class="contacts">
+        <div class="container contacts__container">
+            <!-- Ліва колонка -->
+            <div class="contacts__info">
+                <div class="contacts__block">
+                    <a href="https://maps.app.goo.gl/y9jkHgbZWeBHmCza8" target="_blank" rel="noopener"
+                        class="contacts__address">
+                        Kyiv,<br>Mechnikova str, 14
+                    </a>
                 </div>
 
-                <p class="footer__copy">© 2021 HLEGAL Law company, LLC</p>
+                <div class="contacts__block">
+                    <a href="tel:0800211927" class="contacts__phone">0800 211 927</a>
+                    <a href="mailto:contact@forstudy.space" class="contacts__email">contact@forstudy.space</a>
+                </div>
+
+                <div class="contacts__block">
+                    <a href="#" class="contacts__social" target="_blank" rel="noopener">
+                        <svg width="38" height="38" class="contacts__social-icon">
+                            <use xlink:href="./sprite.svg#icon-facebook"></use>
+                        </svg>
+                        <span class="contacts__social-text">Our page<br>on facebook</span>
+                    </a>
+                </div>
             </div>
-        </footer>
+
+            <!-- Права колонка з формою буде тут -->
+            <div class="contacts__form-wrapper">
+                <h2 class="contacts__form-title gradient-text">We would like to help you</h2>
+
+                <form action="#" class="contacts__form">
+                    <div class="contacts__form-group">
+                        <input type="text" class="input" placeholder="Name" minlength="3" maxlength="15"
+                            pattern="^[A-Za-z0-9_]+$" required>
+                    </div>
+
+                    <div class="contacts__form-group">
+                        <textarea class="input contacts__textarea" placeholder="Message" rows="4"></textarea>
+                    </div>
+
+                    <p class="contacts__form-subtitle h3caps">How to answer you?</p>
+
+                    <div class="contacts__form-group">
+                        <input type="tel" class="input" placeholder="Phone number" pattern="^\+?380\d{9}$" required>
+                    </div>
+
+                    <div class="contacts__form-group">
+                        <input type="email" class="input" placeholder="Email" required>
+                    </div>
+
+                    <button type="submit" class="btn contacts__submit-btn">Send message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <div class="footer__row">
+                    <span class="footer__address">Kyiv, Mechnikova str, 14/1</span>
+                    <a href="https://maps.app.goo.gl/y9jkHgbZWeBHmCza8" target="_blank" rel="noopener"
+                        class="footer__map">on map</a>
+                </div>
+
+                <div class="footer__row">
+                    <a href="#" class="footer__social" aria-label="Facebook">
+                        <svg width="38" height="38" class="footer__social-icon">
+                            <use xlink:href="./sprite.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                    <a href="tel:0800211927" class="footer__phone">0800 211 927</a>
+                    <a href="mailto:contact@forstudy.space" class="footer__email">contact@forstudy.space</a>
+                </div>
+            </div>
+
+            <p class="footer__copy">© 2021 HLEGAL Law company, LLC</p>
+        </div>
+    </footer>
 </body>
+
 </html>
